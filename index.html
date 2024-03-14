@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Bella Onojie</title>
     <link rel="stylesheet" href="css/main.css">
@@ -12,14 +17,16 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html">
-                <img src="images/logo.png" alt="Bella Onije Logo">
-            </a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bella Onije Logo">
+                </a>
+            </div>
             <!-- Navigation Menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Product</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -27,65 +34,109 @@
         </header>
         <main>
 
-            <!-- Div with background image (no repeat) and foreground image (phones) -->
             <div class="banner">
                 <h3>Food App</h3>
                 <h1>Why stay hungry when you can order from Bella Onojie</h1>
-                <p>Download the Bella Onojie's app now</p>
-                <button>Playstore</button>
-                <button>App Store</button>
-            </div>
+                <p>Download the Bella Onojie's food app now on</p>
+                <div class="button-container">
+                    <button class="banner-btn">Playstore</button>
+                    <button class="banner-btn">App Store</button>
+                </div>
+                <picture class="main-pct">
+                    <source srcset="images/main/desktop/main-414x881.png x,
+                        images/main/desktop/main-828x1762.png 2x" media="(min-width: 960px)" />
 
-            <h2>How the app works</h2>
-            <div class="account">
-                <div class="account-txt">
-                    <h3>Create an Account</h3>
-                    <h2>Create/login to an exisiting account to get started</h2>
-                    <p>An account is created with your email and a desired password.</p>
+                    <source srcset="images/main/mobile/main-600x844.png x,
+                        images/main/mobile/main-1200x1688.png 2x" media="(max-width: 959px)" />
+
+                    <img src="images/main/main.png" alt="">
+                </picture>
+                <h4 class="how">How the app works</h4>
+            </div>
+            <div class="sections">
+                <div class="section account">
+                    <div>
+                        <h3>Create an Account</h3>
+                        <h2>Create/login to an exisiting account to get started</h2>
+                        <p class="section-txt">An account is created with your email and a desired password.</p>
+                    </div>
+                    <div class="phone-img account">
+                        <picture>
+                            <!-- Desktop versions -->
+                            <source srcset="images/create/desktop/create-414x881.png,
+                  images/create/desktop/create-828x1762.png 2x" media="(min-width: 960px)" />
+
+                            <!-- Mobile versions -->
+                            <source srcset="images/create/mobile/create-390-844.png,
+                  images/create/mobile/create-780x1688.png 2x" media="(max-width: 959px)" />
+
+                            <img src="images/create/create.png" alt="Image 1" />
+                        </picture>
+                    </div>
                 </div>
-                <div class="account-img">
-                    <img src="images/create.png" alt="">
+
+                <div class="section variety">
+                    <div>
+                        <h3 id="desktop-explr">Explore Varieties</h3>
+                        <h3 id="mobile-explr">Explore while shopping</h3>
+                        <h2>Shop for your favorites meal as e dey hot.</h2>
+                        <p class="section-txt">Shop for your favorite meals or drinks and enjoy while doing it.
+                        </p>
+                    </div>
+                    <div class="phone-img variety">
+                        <picture>
+                            <!-- Desktop -->
+                            <source srcset="images/explore/desktop/explore-414x881.png,
+                        images/explore/desktop/explore-828x1762.png 2x" media="(min-width: 960px)" />
+
+                            <!-- Mobile -->
+                            <source srcset="images/explore/mobile/explore-390x844.png x,
+                        images/explore/mobile/explore-780x1688.png 2x" media="(max-width: 959px)" />
+
+                            <img src="images/explore/explore.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="section checkout">
+                    <div>
+                        <h3>Checkout</h3>
+                        <h2>Once you done check out, get it delivered.</h2>
+                        <p class="section-txt">When you done check out and get it
+                            delivered with ease.</p>
+                    </div>
+                    <div class="phone-img checkout">
+                        <picture>
+                            <source srcset="images/checkout/desktop/checkout-414x881.png,
+                        images/checkout/desktop/checkout-828x1762.png 2x" media="(min-width: 960px)" />
+
+                            <source srcset="images/checkout/mobile/checkout-390x844.png,
+                        images/checkout/mobile/checkout-780x1688.png 2x" media="(max-width: 959px)" />
+
+                            <img src="images/checkout/checkout.png" alt="">
+                        </picture>
+                    </div>
                 </div>
             </div>
-
-            <div class="variety">
-                <div class="variety-txt">
-                    <h3 id="desktop-explr">Explore Varieties</h3>
-                    <h3 id="mobile-explr">Explore while shopping</h3>
-                    <h2>Shop your favourites flavours for every occasion</h2>
-                    <p>Shop your favourite cake pops and desserts and enjoy yourself while doing so.</p>
-                </div>
-                <div class="variety-img">
-                    <img src="images/explore.png" alt="">
-                </div>
-            </div>
-
-            <div class="checkout">
-                <div class="checkout-txt">
-                    <h3>Checkout</h3>
-                    <h2>Once you're done checking out, get it delivered.</h2>
-                    <p>After checkout get your tasty sweets delivered with ease.</p>
-                </div>
-                <div class="checkout-img">
-                    <img src="images/checkout.png" alt="">
-                </div>
-            </div>
-
-            <div>
+            <div class="download">
                 <h2>Download the app now.</h2>
-                <p>Available on your favourite app store. Start your premium experience now.</p>
-                <button>Playstore</button>
-                <button>App store</button>
+                <h3 id="desktop-h3">Available on your favourite app store. Start your premium experience now.</h3>
+                <h3 id="mobile-h3">Most calendars are designed for teams.</h3>
+                <button id="desktop-btn1">Playstore</button>
+                <button id="desktop-btn2">App store</button>
+                <!-- Buttons for mobile -->
+                <button id="mobile-btn1">Buy now</button>
+                <button id="mobile-btn2">Try for free</button>
             </div>
         </main>
 
         <footer>
-            <img src="images/logo.png" alt="Bella Onojie Logo">
-
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <h4>Copyright &copy; 2023 Bella Onojie.com</h4>
+            <img id="desktop-logo" src="images/logo.png" alt="Bella Onojie Logo">
+            <a href="https://twitter.com/home" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a id="mobile-icon" href="https://ca.linkedin.com/" class="fa fa-linkedin"></a>
+            <a id="desktop-icon" href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <h4>Copyright &copy; 2023 <br>Bella Onojie.com</h4>
         </footer>
     </div>
 

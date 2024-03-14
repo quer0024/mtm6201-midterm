@@ -1,0 +1,560 @@
+/* GLOBAL STYLES */
+
+/* Styling Typefaces */
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.container main,
+.container footer,
+.container header {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #fa4a0c;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+p {
+  color: #737373;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+/* Styling Navigation Menu */
+
+nav {
+  display: block;
+  align-items: center;
+}
+
+nav ul {
+  width: 100%;
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1em;
+  padding-left: 0;
+}
+
+nav ul li a {
+  font-weight: 600;
+  color: rgb(54, 32, 17);
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid #fa4a0c;
+}
+
+/* Stylng images */
+
+/* Styling Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #fafafa, white);
+}
+
+.banner .banner-btn {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fa4a0c;
+  border: 1px solid #fa4a0c;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 1em 0.5em 1em 0.5em;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.banner-btn:hover {
+  color: white;
+  background-color: #fa4a0c;
+}
+
+.how {
+  font-weight: 600;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 0;
+  padding-bottom: 2em;
+}
+
+/* Styling sections */
+
+.section {
+  margin: 20px auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 1.5em;
+}
+
+.section-txt {
+  margin: 40px;
+}
+
+/* Styling Explore Varieties */
+
+#desktop-explr {
+  display: none;
+}
+
+/* Styling Download */
+
+#desktop-h3,
+#desktop-btn1,
+#desktop-btn2 {
+  display: none;
+}
+
+#mobile-h3 {
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+.download {
+  padding: 2em;
+  color: white;
+  background-color: #252b42;
+}
+
+#mobile-btn1,
+#mobile-btn2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 1em;
+  text-align: center;
+}
+
+#mobile-btn1:hover,
+#mobile-btn2:hover {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid #fa4a0c;
+  border-radius: 10px;
+  background-color: #fa4a0c;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Styling Footer */
+
+footer {
+  padding-top: 4em;
+  margin: 1.5em;
+}
+
+#desktop-logo {
+  display: none;
+}
+
+/* Styling Icons */
+
+.fa {
+  font-size: 50px;
+  width: 50px;
+  color: #fa4a0c;
+  text-decoration: none;
+}
+
+.fa-linkedin,
+.fa-facebook {
+  color: white;
+  background: #fa4a0c;
+  padding-top: 4px;
+}
+
+/***************STYLING OTHER PAGES***************/
+
+/******STYLING PRODUCTS PAGE******/
+
+.cards {
+  margin: 30px;
+  line-height: 2.5em;
+}
+
+.appetizers,
+.mains,
+.desserts {
+  border: 2px solid #d668145b;
+  border-radius: 10px;
+}
+
+.cards h3 {
+  color: #ff7c18;
+  font-size: 45px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.card h2 {
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.card p {
+  margin-top: 0px;
+}
+
+.cost {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/******STYLING FAQ PAGE******/
+
+.faq {
+  margin: 1.5em;
+}
+
+.faq-h3 {
+  color: #ff7c18;
+}
+
+.cnct-btn {
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #fa4a0c;
+  border: #fa4a0c;
+  border-radius: 20px;
+  padding: 1em 2em 1em 2em;
+}
+
+.cnct-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/******STYLING CONTACT PAGE******/
+
+/* Styling Contact Info */
+
+.contact h3 {
+  font-style: italic;
+}
+
+.info p {
+  color: #252b42;
+  line-height: 1em;
+}
+
+.contact {
+  color: #252b42;
+  line-height: 1em;
+  padding-bottom: 2em;
+}
+
+.cntc-h2 {
+  font-size: 65px;
+}
+
+/* Styling Contact Form */
+.form h2 {
+  color: white;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+}
+
+.form {
+  color: #252b42;
+  background-color: #ff7c18;
+  border: 2px solid #ff7c18;
+  border-radius: 20px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding-left: 10px;
+  font-size: 24px;
+  height: 40px;
+  width: 100%;
+  border: #ff7c18;
+  border-radius: 20px;
+}
+
+textarea {
+  height: 90px;
+}
+
+label {
+  color: white;
+  display: block;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 10px;
+}
+
+/* Styling Hours */
+
+.hours {
+  padding-bottom: 2em;
+}
+
+.hours h2 {
+  color: #252b42;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.hours h3 {
+  color: #ff7c18;
+}
+
+/*************** STYLING DESKTOP *****************/
+
+@media screen and (min-width: 1020px) {
+  /* Styling Nav */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 50px;
+  }
+
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+
+  /* Styling Banner */
+  .banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner h1 {
+    font-size: 3rem;
+    margin: 0 5em 0 5em;
+  }
+
+  .banner p {
+    color: white;
+  }
+
+  .banner .banner-btn {
+    color: white;
+    border: 1px solid white;
+  }
+
+  .banner-btn:focus,
+  .banner-btn:hover {
+    border: 1px solid #fa4a0c;
+  }
+
+  .banner-btn:active {
+    background-color: #a8350c;
+    border: 1px solid #a8350c;
+  }
+
+  /* Styling Sections */
+
+  .sections {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .section > div {
+    flex: 1;
+  }
+
+  .phone-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .account .phone-img,
+  .checkout .phone-img {
+    order: -1;
+  }
+
+  /* Styling Download */
+
+  #mobile-h3 {
+    display: none;
+  }
+
+  #desktop-h3 {
+    display: block;
+    color: white;
+    font-weight: 400;
+  }
+
+  .download {
+    padding: 5em 0 5em 0;
+    background-image: url(../images/download-banner.png);
+  }
+
+  #mobile-btn1,
+  #mobile-btn2 {
+    display: none;
+  }
+
+  #desktop-btn1,
+  #desktop-btn2 {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1em;
+    text-align: center;
+  }
+
+  #desktop-btn2 {
+    margin-left: 10px;
+  }
+
+  #desktop-btn1:hover,
+  #desktop-btn2:hover {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #fa4a0c;
+    border-radius: 10px;
+    background-color: #fa4a0c;
+    padding: 1em;
+    text-align: center;
+  }
+
+  #desktop-btn1:focus,
+  #desktop-btn2:active {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid #a8350c;
+    border-radius: 10px;
+    background-color: #a8350c;
+    padding: 1em;
+    text-align: center;
+  }
+
+  /* Styling Footer */
+
+  #mobile-icon {
+    display: none;
+  }
+
+  #desktop-icon {
+    color: white;
+    background-color: #fa4a0c;
+    margin: 3px 0 3px 0;
+  }
+
+  #desktop-logo,
+  footer a,
+  footer h4 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  footer a,
+  footer h4 {
+    margin-right: 10px;
+  }
+
+  /********STYLING OTHER PAGES******/
+
+  /* Styling Products */
+
+  .menu {
+    display: flex;
+  }
+
+  /* Styling FAQ */
+
+  /* Styling Contact */
+}

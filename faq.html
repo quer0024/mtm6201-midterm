@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main/css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Bella Onojie</title>
 
 </head>
@@ -13,52 +13,58 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html">
-                <img src="images/logo.png" alt="Bella Onije Logo">
-            </a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Bella Onije Logo">
+                </a>
+            </div>
             <!-- Navigation Menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Product</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="main-faq">
+            <h2>FAQ</h2>
             <div class="faq">
-                <h3>What are your open hours?</h3>
+                <h3 class="faq-h3">What are your open hours?</h3>
                 <p>Our hours can be found under contact. We are open Monday-Saturday 3pm - 11pm. We are closed Sundays.
                 </p>
-                <h3>Are your deliveries done with a third party service?</h3>
+                <h3 class="faq-h3"> Are your deliveries done with a third party service?</h3>
                 <p>No, we have delivery people that you can easily get in contact with after you've placed an order.
                 </p>
-                <h3>Can you accomadate large groups and deliveries?</h3>
+                <h3 class="faq-h3">Can you accomadate large groups and deliveries?</h3>
                 <p>Generally yes, however, a reservation for in-person is reccomended. A days notice for big deliveries
                     is appreciated but not necessary.</p>
-                <h3>Are gift cards available?</h3>
+                <h3 class="faq-h3">Are gift cards available?</h3>
                 <p>Yes! You can buy gift cards in person.</p>
-                <h3>Have another question?</h3>
-                <button><a href="contact.html" class="contact-button">Contact Us</a></button>
+                <h3 class="faq-h3">Have another question?</h3>
+                <button class="cnct-btn"><a href="contact.html" class="contact-button">Contact Us</a></button>
             </div>
-            <div>
+            <div class="download">
                 <h2>Download the app now.</h2>
-                <h3>Available on your favourite app store. Start your premium experience now.</h3>
-                <button>Playstore</button>
-                <button>App store</button>
+                <h3 id="desktop-h3">Available on your favourite app store. Start your premium experience now.</h3>
+                <h3 id="mobile-h3">Most calendars are designed for teams.</h3>
+                <button id="desktop-btn1">Playstore</button>
+                <button id="desktop-btn2">App store</button>
+                <!-- Buttons for mobile -->
+                <button id="mobile-btn1">Buy now</button>
+                <button id="mobile-btn2">Try for free</button>
             </div>
 
         </main>
         <footer>
-            <img src="images/logo.png" alt="Bella Onojie Logo">
-
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <h4>Copyright &copy; 2023 Bella Onojie.com</h4>
+            <img id="desktop-logo" src="images/logo.png" alt="Bella Onojie Logo">
+            <a href="https://twitter.com/home" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a id="mobile-icon" href="https://ca.linkedin.com/" class="fa fa-linkedin"></a>
+            <a id="desktop-icon" href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <h4>Copyright &copy; 2023 <br>Bella Onojie.com</h4>
         </footer>
-    </div>
 
 </body>
 
