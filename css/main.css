@@ -27,6 +27,23 @@ body {
   width: 100%;
 }
 
+/* Animation #1 - Page Fade In  */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+main {
+  animation: fadeIn ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 h1 {
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
@@ -57,7 +74,7 @@ h4 {
 
 p {
   color: #737373;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -83,6 +100,9 @@ nav ul {
 }
 
 nav ul li a {
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 600;
   color: rgb(54, 32, 17);
   text-decoration: none;
@@ -102,6 +122,34 @@ nav ul li a {
   background: linear-gradient(to bottom, #fafafa, white);
 }
 
+.banner p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.banner h3 {
+  color: #737373;
+  margin-bottom: 5px;
+}
+
+/* Animation #2 - Banner Text Translate */
+
+@keyframes bannerTranslate {
+  0% {
+    transform: translate(0, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.banner h3,
+.banner h1,
+.banner p,
+.banner .button-container {
+  animation: bannerTranslate ease 1s;
+}
+
 .banner .banner-btn {
   font-size: 20px;
   font-weight: 600;
@@ -116,9 +164,25 @@ nav ul li a {
   margin-top: 20px;
 }
 
+.banner-btn:focus,
 .banner-btn:hover {
   color: white;
   background-color: #fa4a0c;
+}
+
+.banner-btn:active {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+picture {
+  position: relative;
+}
+
+img,
+source,
+srcset {
+  width: 100%;
+  position: 50%;
 }
 
 .how {
@@ -158,10 +222,14 @@ nav ul li a {
 #mobile-h3 {
   color: #bdbdbd;
   font-weight: 400;
+  padding-bottom: 20px;
 }
 
 .download {
-  padding: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 4em;
+  padding-bottom: 5em;
   color: white;
   background-color: #252b42;
 }
@@ -190,6 +258,10 @@ nav ul li a {
   text-align: center;
 }
 
+#mobile-btn2 {
+  margin-left: 10px;
+}
+
 /* Styling Footer */
 
 footer {
@@ -203,11 +275,21 @@ footer {
 
 /* Styling Icons */
 
+#desktop-icon {
+  display: none;
+}
+
 .fa {
   font-size: 50px;
   width: 50px;
   color: #fa4a0c;
   text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.copy {
+  font-size: smaller;
 }
 
 .fa-linkedin,
@@ -215,11 +297,29 @@ footer {
   color: white;
   background: #fa4a0c;
   padding-top: 4px;
+  border: 0.1px solid #fa4a0c;
+  border-radius: 5px;
 }
 
 /***************STYLING OTHER PAGES***************/
 
 /******STYLING PRODUCTS PAGE******/
+
+/* Animation #3 - Menu Translate Up */
+
+@keyframes menuTranslate {
+  0% {
+    transform: translate(0, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.menu {
+  padding-bottom: 2em;
+  animation: menuTranslate ease 2s;
+}
 
 .cards {
   margin: 30px;
@@ -238,6 +338,7 @@ footer {
   font-size: 45px;
   margin-bottom: 0;
   margin-top: 20px;
+  font-style: italic;
 }
 
 .card h2 {
@@ -246,12 +347,38 @@ footer {
 }
 
 .card p {
-  margin-top: 0px;
+  margin: 0 10px 24px;
 }
 
 .cost {
   font-style: italic;
   margin-bottom: 0;
+}
+
+.order-btn {
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #fa4a0c;
+  border: #fa4a0c;
+  border-radius: 20px;
+  padding: 1em 2em 1em 2em;
+  margin-bottom: 2em;
+}
+
+.order-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.order-btn:focus,
+.order-btn:hover {
+  background-color: #df4d18;
+  border: #df4d18;
+}
+
+.order-btn:active {
+  background-color: #a8350c;
+  border: #a8350c;
 }
 
 /******STYLING FAQ PAGE******/
@@ -260,7 +387,7 @@ footer {
   margin: 1.5em;
 }
 
-.faq-h3 {
+.faq h3 {
   color: #ff7c18;
 }
 
@@ -271,11 +398,23 @@ footer {
   border: #fa4a0c;
   border-radius: 20px;
   padding: 1em 2em 1em 2em;
+  margin-bottom: 2em;
 }
 
 .cnct-btn a {
   color: white;
   text-decoration: none;
+}
+
+.cnct-btn:focus,
+.cnct-btn:hover {
+  background-color: #df4d18;
+  border: #df4d18;
+}
+
+.cnct-btn:active {
+  background-color: #a8350c;
+  border: #a8350c;
 }
 
 /******STYLING CONTACT PAGE******/
@@ -319,6 +458,9 @@ footer {
   border-radius: 20px;
   padding: 1em;
   margin: 0 auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 25px;
 }
 
 input,
@@ -346,6 +488,32 @@ label {
   padding-top: 10px;
 }
 
+.form-btn {
+  background-color: white;
+  color: #fa4a0c;
+  margin-top: 60px;
+  padding: 0.8em;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+.form-btn:focus,
+.form-btn:hover {
+  background-color: #e4e4e4;
+  border: 1px solid #e4e4e4;
+  cursor: pointer;
+}
+
+.form-btn:active {
+  background-color: #bdbdbd;
+  border: 1px solid #bdbdbd;
+  color: white;
+}
+
 /* Styling Hours */
 
 .hours {
@@ -353,13 +521,21 @@ label {
 }
 
 .hours h2 {
+  font-style: italic;
   color: #252b42;
   margin-top: 1em;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .hours h3 {
   color: #ff7c18;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hour p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /*************** STYLING DESKTOP *****************/
@@ -391,7 +567,12 @@ label {
     margin-left: 0;
   }
 
+  nav ul li a {
+    border-bottom: none;
+  }
+
   /* Styling Banner */
+
   .banner {
     background-image: url(../images/banner.png);
     background-repeat: no-repeat;
@@ -407,6 +588,12 @@ label {
   }
 
   .banner p {
+    color: white;
+  }
+
+  .banner h3 {
+    margin-top: 3em;
+    margin-bottom: 20px;
     color: white;
   }
 
@@ -498,6 +685,8 @@ label {
     margin-left: 10px;
   }
 
+  #desktop-btn1:focus,
+  #desktop-btn2:focus,
   #desktop-btn1:hover,
   #desktop-btn2:hover {
     font-size: 22px;
@@ -510,7 +699,7 @@ label {
     text-align: center;
   }
 
-  #desktop-btn1:focus,
+  #desktop-btn1:active,
   #desktop-btn2:active {
     font-size: 22px;
     font-weight: 600;
@@ -524,19 +713,30 @@ label {
 
   /* Styling Footer */
 
+  footer {
+    padding: 1em;
+  }
+
+  #desktop-logo {
+    max-width: 150px;
+  }
+
   #mobile-icon {
     display: none;
   }
 
   #desktop-icon {
     color: white;
-    background-color: #fa4a0c;
-    margin: 3px 0 3px 0;
+    background: #fa4a0c;
+    padding-top: 2px;
+    border: 0.1px solid #fa4a0c;
+    border-radius: 5px;
   }
 
   #desktop-logo,
+  #desktop-icon,
   footer a,
-  footer h4 {
+  footer p {
     display: inline-block;
     vertical-align: middle;
   }
@@ -550,11 +750,74 @@ label {
 
   /* Styling Products */
 
+  .menu-img {
+    background-image: url(../images/products/steak.jpg);
+    padding: 2.5em;
+    background-position: 20%;
+    background-size: cover;
+    color: white;
+  }
+
+  .menu-img h2 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
   .menu {
     display: flex;
+    margin-top: 1.5em;
+  }
+
+  .cards p {
+    margin: 10px;
   }
 
   /* Styling FAQ */
 
+  .faq {
+    margin-left: 12em;
+    margin-right: 12em;
+  }
+
   /* Styling Contact */
+
+  .contact-form {
+    display: grid;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    grid-template-areas:
+      "contact form"
+      "hours form";
+    gap: 20px;
+  }
+
+  .contact {
+    grid-area: contact;
+    padding-bottom: 0;
+  }
+
+  .contact h3 {
+    margin-top: 10px;
+  }
+
+  .cotact p {
+    margin-bottom: 0;
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .hours {
+    grid-area: hours;
+    padding-bottom: 0;
+  }
+
+  .hours h2 {
+    margin-top: 0;
+  }
+
+  .hours .closed {
+    margin-bottom: 0;
+  }
 }

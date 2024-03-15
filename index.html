@@ -35,7 +35,7 @@
         <main>
 
             <div class="banner">
-                <h3>Food App</h3>
+                <h3>Food app</h3>
                 <h1>Why stay hungry when you can order from Bella Onojie</h1>
                 <p>Download the Bella Onojie's food app now on</p>
                 <div class="button-container">
@@ -43,13 +43,14 @@
                     <button class="banner-btn">App Store</button>
                 </div>
                 <picture class="main-pct">
-                    <source srcset="images/main/desktop/main-414x881.png x,
-                        images/main/desktop/main-828x1762.png 2x" media="(min-width: 960px)" />
+                    <!-- 480px Viewport -->
+                    <source srcset="images/main/mobile/main-480x600.png 1x,
+                    images/main/mobile/main-960x1200.png 2x" media="(max-width: 959px)" />
 
-                    <source srcset="images/main/mobile/main-600x844.png x,
-                        images/main/mobile/main-1200x1688.png 2x" media="(max-width: 959px)" />
-
-                    <img src="images/main/main.png" alt="">
+                    <!-- 960px Viewport -->
+                    <source srcset="images/main/desktop/main-648x886.png 1x,
+                        images/main/desktop/main-1296x1772.png 2x" media="(min-width: 960px)" />
+                    <img src="images/main/desktop/main-648x886.png" alt="">
                 </picture>
                 <h4 class="how">How the app works</h4>
             </div>
@@ -60,17 +61,17 @@
                         <h2>Create/login to an exisiting account to get started</h2>
                         <p class="section-txt">An account is created with your email and a desired password.</p>
                     </div>
-                    <div class="phone-img account">
+                    <div class="phone-img">
                         <picture>
                             <!-- Desktop versions -->
-                            <source srcset="images/create/desktop/create-414x881.png,
-                  images/create/desktop/create-828x1762.png 2x" media="(min-width: 960px)" />
+                            <source srcset="images/create/desktop/create-648x866.png 1x,
+                            images/create/desktop/create-1296x1772.png 2x" media="(min-width: 960px)" />
 
                             <!-- Mobile versions -->
-                            <source srcset="images/create/mobile/create-390-844.png,
-                  images/create/mobile/create-780x1688.png 2x" media="(max-width: 959px)" />
+                            <source srcset="images/create/mobile/create-480x600.png 1x,
+                            images/create/mobile/create-960x1200.png 2x" media="(max-width: 959px)" />
 
-                            <img src="images/create/create.png" alt="Image 1" />
+                            <img src="images/create/desktop/create-desktop.png" alt="Image 1" />
                         </picture>
                     </div>
                 </div>
@@ -83,17 +84,17 @@
                         <p class="section-txt">Shop for your favorite meals or drinks and enjoy while doing it.
                         </p>
                     </div>
-                    <div class="phone-img variety">
+                    <div class="phone-img">
                         <picture>
-                            <!-- Desktop -->
-                            <source srcset="images/explore/desktop/explore-414x881.png,
-                        images/explore/desktop/explore-828x1762.png 2x" media="(min-width: 960px)" />
+                            <!-- Desktop versions -->
+                            <source srcset="images/explore/desktop/explore-648x866.png 1x,
+                            images/explore/desktop/explore-1296x1772.png 2x" media="(min-width: 960px)" />
 
-                            <!-- Mobile -->
-                            <source srcset="images/explore/mobile/explore-390x844.png x,
-                        images/explore/mobile/explore-780x1688.png 2x" media="(max-width: 959px)" />
+                            <!-- Mobile versions -->
+                            <source srcset="images/explore/mobile/explore-480x600.png 1x,
+                            images/explore/mobile/explore-960x1200.png 2x" media="(max-width: 959px)" />
 
-                            <img src="images/explore/explore.png" alt="">
+                            <img src="images/explore/mobile/explore-480x600.png" alt="Image 1" />
                         </picture>
                     </div>
                 </div>
@@ -105,15 +106,17 @@
                         <p class="section-txt">When you done check out and get it
                             delivered with ease.</p>
                     </div>
-                    <div class="phone-img checkout">
+                    <div class="phone-img">
                         <picture>
-                            <source srcset="images/checkout/desktop/checkout-414x881.png,
-                        images/checkout/desktop/checkout-828x1762.png 2x" media="(min-width: 960px)" />
+                            <!-- Desktop versions -->
+                            <source srcset="images/checkout/desktop/checkout-648x866.png 1x,
+                            images/checkout/desktop/checkout-1296x1772.png 2x" media="(min-width: 960px)" />
 
-                            <source srcset="images/checkout/mobile/checkout-390x844.png,
-                        images/checkout/mobile/checkout-780x1688.png 2x" media="(max-width: 959px)" />
+                            <!-- Mobile versions -->
+                            <source srcset="images/checkout/mobile/checkout-480x600.png 1x,
+                            images/checkout/mobile/checkout-960x1200.png 2x" media="(max-width: 959px)" />
 
-                            <img src="images/checkout/checkout.png" alt="">
+                            <img src="images/explore/mobile/explore-480x600.png" alt="Image 1" />
                         </picture>
                     </div>
                 </div>
@@ -131,12 +134,13 @@
         </main>
 
         <footer>
-            <img id="desktop-logo" src="images/logo.png" alt="Bella Onojie Logo">
+            <a href="index.html">
+                <img id="desktop-logo" src="images/logo.png" alt="Bella Onojie Logo"></a>
             <a href="https://twitter.com/home" class="fa fa-twitter"></a>
             <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
             <a id="mobile-icon" href="https://ca.linkedin.com/" class="fa fa-linkedin"></a>
             <a id="desktop-icon" href="https://www.instagram.com/" class="fa fa-instagram"></a>
-            <h4>Copyright &copy; 2023 <br>Bella Onojie.com</h4>
+            <p class="copy">Copyright &copy; 2023 Bella Onojie.com</p>
         </footer>
     </div>
 
