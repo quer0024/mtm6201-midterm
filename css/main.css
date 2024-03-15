@@ -677,6 +677,7 @@ label {
   }
 
   .how {
+    font-size: 2rem;
     color: #252b42;
     font-weight: 700;
   }
@@ -692,6 +693,15 @@ label {
     flex-direction: row;
     align-items: center;
     margin-bottom: 20px;
+  }
+
+  .variety {
+    margin-left: 5em;
+  }
+
+  .checkout,
+  .account {
+    margin-right: 4em;
   }
 
   .section > div {
