@@ -1,6 +1,5 @@
 /* GLOBAL STYLES */
 
-/* Styling Typefaces */
 html {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +21,6 @@ body {
 }
 
 .container main,
-.container footer,
 .container header {
   width: 100%;
 }
@@ -43,6 +41,8 @@ main {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+
+/* Styling Typefaces */
 
 h1 {
   font-size: 2rem;
@@ -81,6 +81,48 @@ p {
   line-height: 1.5em;
 }
 
+/* Styling Skip Links */
+
+.skip-links {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  color: white;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.skip-links:focus-within,
+.skip-links:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.skip-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-links ul li {
+  display: inline;
+}
+
+.skip-links a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  background-color: #fa4a0c;
+  text-decoration: none;
+}
+
+.skip-links a:focus,
+.skip-links a:hover {
+  background-color: #a8350c;
+}
+
 /* Styling Navigation Menu */
 
 nav {
@@ -112,9 +154,8 @@ nav ul li a {
   border-bottom: 1px solid #fa4a0c;
 }
 
-/* Stylng images */
-
 /* Styling Banner */
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -150,6 +191,8 @@ nav ul li a {
   animation: bannerTranslate ease 1s;
 }
 
+/* Styling Banner Buttons */
+
 .banner .banner-btn {
   font-size: 20px;
   font-weight: 600;
@@ -174,9 +217,14 @@ nav ul li a {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-picture {
-  position: relative;
+.how {
+  font-weight: 600;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 0;
+  padding-bottom: 2em;
 }
+
+/* Styling images */
 
 img,
 source,
@@ -185,11 +233,17 @@ srcset {
   position: 50%;
 }
 
-.how {
-  font-weight: 600;
-  border-bottom: 2px solid #e4e4e4;
-  margin: 0;
-  padding-bottom: 2em;
+/* Media queries to center images more (html is grabbing from fallback image not source) */
+
+@media screen and (max-width: 999px) {
+  img {
+    overflow-x: hidden;
+    width: auto;
+  }
+
+  .main-pct {
+    width: 100%;
+  }
 }
 
 /* Styling sections */
@@ -233,6 +287,8 @@ srcset {
   color: white;
   background-color: #252b42;
 }
+
+/* Styling download buttons */
 
 #mobile-btn1,
 #mobile-btn2 {
@@ -355,10 +411,13 @@ footer {
   margin-bottom: 0;
 }
 
+/* Styling products page order button */
+
 .order-btn {
   font-size: 24px;
   font-weight: 600;
   background-color: #fa4a0c;
+  color: white;
   border: #fa4a0c;
   border-radius: 20px;
   padding: 1em 2em 1em 2em;
@@ -374,6 +433,7 @@ footer {
 .order-btn:hover {
   background-color: #df4d18;
   border: #df4d18;
+  cursor: pointer;
 }
 
 .order-btn:active {
@@ -390,6 +450,8 @@ footer {
 .faq h3 {
   color: #ff7c18;
 }
+
+/* Styling FAQ page contact Button */
 
 .cnct-btn {
   font-size: 24px;
@@ -441,6 +503,7 @@ footer {
 }
 
 /* Styling Contact Form */
+
 .form h2 {
   color: white;
   font-size: 40px;
@@ -540,8 +603,9 @@ label {
 
 /*************** STYLING DESKTOP *****************/
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1000px) {
   /* Styling Nav */
+
   header {
     display: flex;
     justify-content: space-between;
@@ -612,6 +676,10 @@ label {
     border: 1px solid #a8350c;
   }
 
+  .how {
+    color: #252b42;
+    font-weight: 700;
+  }
   /* Styling Sections */
 
   .sections {
@@ -629,6 +697,8 @@ label {
   .section > div {
     flex: 1;
   }
+
+  /* Styling images */
 
   .phone-img {
     flex: 1;
@@ -662,6 +732,8 @@ label {
     padding: 5em 0 5em 0;
     background-image: url(../images/download-banner.png);
   }
+
+  /* Styling download buttons */
 
   #mobile-btn1,
   #mobile-btn2 {
@@ -714,7 +786,10 @@ label {
   /* Styling Footer */
 
   footer {
+    max-width: 100%;
     padding: 1em;
+    margin-right: 0;
+    padding-right: 0;
   }
 
   #desktop-logo {
@@ -742,7 +817,7 @@ label {
   }
 
   footer a,
-  footer h4 {
+  footer p {
     margin-right: 10px;
   }
 
@@ -774,12 +849,31 @@ label {
 
   /* Styling FAQ */
 
+  @keyframes faqTranslate {
+    0% {
+      transform: translate(0, 200px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
   .faq {
+    animation: faqTranslate ease 2s;
     margin-left: 12em;
     margin-right: 12em;
   }
 
   /* Styling Contact */
+
+  @keyframes gridTranslate {
+    0% {
+      transform: translate(0, 200px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 
   .contact-form {
     display: grid;
@@ -789,6 +883,7 @@ label {
       "contact form"
       "hours form";
     gap: 20px;
+    animation: menuTranslate ease 2s;
   }
 
   .contact {
@@ -807,6 +902,8 @@ label {
   .form {
     grid-area: form;
   }
+
+  /* Styling hours */
 
   .hours {
     grid-area: hours;
