@@ -12,6 +12,13 @@
 
 <body>
     <div class="container">
+        <!-- Adding skip links to main and footer content -->
+        <nav class="skip-links">
+            <ul>
+                <li><a href="#main-content">Skip to main content</a></li>
+                <li><a href="#footer">Skip to footer</a></li>
+            </ul>
+        </nav>
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -28,43 +35,46 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-faq">
+        <main class="main-faq" id="main-content">
             <h2>FAQ</h2>
-            <div class="faq">
-                <h3>What are your open hours?</h3>
+            <!-- List of Frequently Asked Questions and Answers -->
+            <div class="faq" role="list">
+                <h3 role="listitem">What are your open hours?</h3>
                 <p>Our hours can be found under contact. We are open Monday-Saturday 3pm - 11pm. We are closed Sundays.
                 </p>
-                <h3> Are your deliveries done with a third party service?</h3>
+                <h3 role="listitem"> Are your deliveries done with a third party service?</h3>
                 <p>No, we have delivery people that you can easily get in contact with after you've placed an order.
                 </p>
-                <h3>Can you accomadate large groups and deliveries?</h3>
+                <h3 role="listitem">Can you accomadate large groups and deliveries?</h3>
                 <p>Generally yes, however, a reservation for in-person is reccomended. A days notice for big deliveries
                     is appreciated but not necessary.</p>
-                <h3>Are gift cards available?</h3>
+                <h3 role="listitem">Are gift cards available?</h3>
                 <p>Yes! You can buy gift cards in person.</p>
                 <h3>Have another question?</h3>
-                <button class="cnct-btn"><a href="contact.html" class="contact-button">Contact Us</a></button>
+                <a href="contact.html" class="contact-button">
+                    <button class="cnct-btn" aria-label="Contact Us">Contact Us</a></button>
+                </a>
             </div>
-            <div class="download">
-                <h2>Download the app now.</h2>
+            <div class="download" aria-labelledby="download-header">
+                <h2 id="download-header">Download the app now.</h2>
                 <h3 id="desktop-h3">Available on your favourite app store. Start your premium experience now.</h3>
                 <h3 id="mobile-h3">Most calendars are designed for teams.</h3>
-                <button id="desktop-btn1">Playstore</button>
-                <button id="desktop-btn2">App store</button>
+                <button id="desktop-btn1" aria-label="Download from Playstore">Playstore</button>
+                <button id="desktop-btn2" aria-label="Download from App store">App store</button>
                 <!-- Buttons for mobile -->
-                <button id="mobile-btn1">Buy now</button>
-                <button id="mobile-btn2">Try for free</button>
+                <button id="mobile-btn1" aria-label="Buy now">Buy now</button>
+                <button id="mobile-btn2" aria-label="Try for free">Try for free</button>
             </div>
 
         </main>
-        <footer>
+        <footer id="footer">
             <a href="index.html">
                 <img id="desktop-logo" src="images/logo.png" alt="Bella Onojie Logo"></a>
-            <a href="https://twitter.com/home" class="fa fa-twitter"></a>
-            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-            <a id="mobile-icon" href="https://ca.linkedin.com/" class="fa fa-linkedin"></a>
-            <a id="desktop-icon" href="https://www.instagram.com/" class="fa fa-instagram"></a>
-            <p class="copy">Copyright &copy; 2023 Bella Onojie.com</p>
+            <a href="https://twitter.com/home" class="fa fa-twitter" aria-label="twitter"></a>
+            <a href="https://www.facebook.com/" class="fa fa-facebook" aria-label="facebook"></a>
+            <a id="mobile-icon" href="https://ca.linkedin.com/" class="fa fa-linkedin" aria-label="linkedin"></a>
+            <a id="desktop-icon" href="https://www.instagram.com/" class="fa fa-instagram" aria-label="instagram"></a>
+            <p class="copy" aria-label="copyright 2023 Bella Onojie.">Copyright &copy; 2023 Bella Onojie.com</p>
         </footer>
 
 </body>
