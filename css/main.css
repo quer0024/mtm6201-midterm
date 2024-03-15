@@ -913,6 +913,10 @@ label {
     grid-area: form;
   }
 
+  textarea {
+    resize: vertical;
+  }
+
   /* Styling hours */
 
   .hours {
